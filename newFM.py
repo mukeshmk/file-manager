@@ -46,4 +46,13 @@ class file_manager:
 		
 		if flag:
 			print "file not created"
+	def disp_fm(self):
+		print "the list of folders and files "
+		for i in range(len(self.lfol)-1,-1,-1):
+			self.lfol[i].disp()
+	
+	def disp_file(self):
+		print "\nthe list of all files"
+		for i in range(len(self.lfile)):
+			print self.lfile[i].get_name()
 	
