@@ -27,4 +27,23 @@ class file_manager:
 		
 		if flag:
 			print "folder not created invalid directory"
+	def create_file(self):
+		temp = file()
+		temp.set_name()
+		
+		flag = 1
+
+		dir = raw_input("enter name of folder to be inserted into:")
+
+		for i in range(len(self.lfol)):
+			if self.lfol[i].get_name() == dir:
+				fold = self.lfol[i]
+				fold.add_child(temp)
+				temp.parent = fold
+				flag = 0
+				self.lfile.append(temp)
+				break
+		
+		if flag:
+			print "file not created"
 	
