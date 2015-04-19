@@ -37,6 +37,7 @@ class folder:
 		for i in range(len(self.child)):
 			print "child: " + str(i+1) + " "+ self.child[i].get_name()
 
+		
 class file:
 	
 	def __init__(self,name = None):
@@ -51,8 +52,7 @@ class file:
 	
 	def get_parent(self):
 		return self.parent
-			
-			
+		
 class file_manager:
 	
 	def __init__(self):
@@ -63,6 +63,7 @@ class file_manager:
 	def create_fm(self):
 		print "THE ROOT NODE !!"
 		self.root.set_name()
+		
 	def create_folder(self):
 		temp = folder()
 		temp.set_name()
@@ -82,6 +83,7 @@ class file_manager:
 		
 		if flag:
 			print "folder not created invalid directory"
+		
 	def create_file(self):
 		temp = file()
 		temp.set_name()
@@ -101,6 +103,8 @@ class file_manager:
 		
 		if flag:
 			print "file not created"
+		
+		
 	def disp_fm(self):
 		print "the list of folders and files "
 		for i in range(len(self.lfol)-1,-1,-1):
@@ -111,3 +115,34 @@ class file_manager:
 		for i in range(len(self.lfile)):
 			print self.lfile[i].get_name()
 	
+
+def main():
+			
+	f = file_manager()
+	f.create_fm()
+	
+	while(1):
+		
+		print "\n1. create file"
+		print "2. creat folder"
+		print "3. list all folders"
+		print "4. list all files"
+		print "0. exit"
+		ch = input("enter choice: ")
+		
+		if ch == 0:
+			break
+		elif ch == 1:
+			f.create_file()
+		elif ch == 2:
+			f.create_folder()
+		elif ch == 3:
+			f.disp_fm()
+		elif ch == 4:
+			f.disp_file()
+		else:
+			continue
+		
+if __name__ == "__main__":
+	print "NEW File Management"
+	main()
