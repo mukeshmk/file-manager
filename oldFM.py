@@ -101,3 +101,12 @@ class file_manager:
 		fold.set_right(temp)
 		temp.parent = fold
 		self.lfol.append(temp)
+	def disp_fm(self):
+		print "the list of folders and files "
+		for i in range(len(self.lfol)):
+			self.lfol[i].disp()
+	
+	def disp_file(self):
+		print "\nthe list of all files"
+		for i in range(len(self.lfile)):
+			print self.lfile[i].get_name()
