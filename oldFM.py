@@ -47,6 +47,21 @@ class folder:
 		else:
 			print "folder nm: None"
 
+class file:
+	
+	def __init__(self,name = None):
+		self.name = name
+		self.parent = None
+		
+	def get_name(self):
+		return self.name
+		
+	def set_name(self):
+		self.name = raw_input("enter name of file:")
+	
+	def get_parent(self):
+		return self.parent
+
 class file_manager:
 	
 	def __init__(self):
