@@ -37,6 +37,22 @@ class folder:
 		for i in range(len(self.child)):
 			print "child: " + str(i+1) + " "+ self.child[i].get_name()
 
+class file:
+	
+	def __init__(self,name = None):
+		self.name = name
+		self.parent = None
+		
+	def get_name(self):
+		return self.name
+		
+	def set_name(self):
+		self.name = raw_input("enter name of file:")
+	
+	def get_parent(self):
+		return self.parent
+			
+			
 class file_manager:
 	
 	def __init__(self):
