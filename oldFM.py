@@ -72,3 +72,11 @@ class file_manager:
 	def create_fm(self):
 		print "THE ROOT NODE !!"
 		self.root.set_name()
+	def create_folder(self):
+		temp = folder()
+		temp.set_name()
+		
+		fold = self.lfol[len(self.lfol)-1]
+		fold.set_right(temp)
+		temp.parent = fold
+		self.lfol.append(temp)
